@@ -14,12 +14,12 @@ pipeline{
         }
         stage('Terraform Plan'){
             steps{
-                sh 'terraform plan'
+                sh '/usr/local/bin/terraform plan'
             }
         }
         stage ('Terraform Apply'){
             steps{
-                sh 'terraform apply --auto-approve'
+                sh '/usr/local/bin/terraform apply --auto-approve'
             }
         }
         
