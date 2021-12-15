@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage ('Git Code Checkout'){
+        stage ('1-Clone'){
             steps{
                 git credentialsId: '82d2de1e-77b3-42ce-9b59-201aa27b1cde', url: 'https://github.com/kiki023/Data2bbots'
             }
