@@ -11,7 +11,6 @@ t2. medium
 
 # To Start.....
 
-
 Install Jenkins on your linux server (Ubuntu 18.04 Distribution)
 
 cd /opt
@@ -68,7 +67,7 @@ $ wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd6
 
 $ sudo unzip terraform_1.1.0_linux_amd64.zip -d /usr/local/bin/
 
-# Export terraform binary path temporarily
+#Export terraform binary path temporarily
 
 $ export PATH=$PATH:/usr/local/bin
 
@@ -85,3 +84,5 @@ Create a new jenkins pipeline job
 After successful pipeline job
 
 Activate webook trigger for continued automation for proof of task.
+
+Please Contact for more enquiries.
