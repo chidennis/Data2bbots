@@ -1,7 +1,7 @@
 # Data2bbots
 This task will provision a RedHat 8 instance using Terraform as Iac and Jenkins tool for our CI-CD pipeline.
 
-Prerequisite
+Prerequisite:
 
 AWS Acccount
 
