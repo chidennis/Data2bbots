@@ -3,14 +3,17 @@ This task will provision a RedHat 8 instance using Terraform as Iac and Jenkins 
 
 # Prerequisite:
 
-AWS Acccount
-Create Ubuntu 18.04 EC2 Instnace
+AWS Web Console
+
+Create Ubuntu 18.04 ec2 Instance
+
 t2. medium
 
 # To Start.....
 
 
 Install Jenkins on your linux server (Ubuntu 18.04 Distribution)
+
 cd /opt
 
 #copy the below and run as script
@@ -25,11 +28,11 @@ sudo apt install docker.io -y
 
 sudo usermod -aG docker ubuntu 
 
-# Install java as jenkins dependency
+#Install java as jenkins dependency
 
 sudo apt install openjdk-11-jdk -y
 
-# install jenkis in ubuntu:
+#install jenkins in ubuntu:
 
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 
@@ -56,7 +59,9 @@ sudo systemctl start jenkins
 # To install Terraform on your now running jenkins server (Ubuntu 18.04 Distribution)
 
 as jenkins user
+
 cd /opt
+
 $ sudo apt install wget unzip -y
 
 $ wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd64.zip
