@@ -73,6 +73,8 @@ $ export PATH=$PATH:/usr/local/bin
 
 # On your Ec2 instance Security group, Open port 8080
 
+On your Ec2 instance: security credentials----> configure access key and secret key to authenticate user to provision in server
+
 Connect to Jenkins server on your web browser using publicip:8080
 
 On Jenkins Dashboard, Go to manage plugins; search for Terraform --- select icon ---- click on install without restart
@@ -86,3 +88,4 @@ After successful pipeline job
 Activate webook trigger for continued automation for proof of task.
 
 Please Contact for more enquiries.
+
