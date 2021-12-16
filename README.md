@@ -86,4 +86,3 @@ Create a new jenkins pipeline job
 After successful pipeline job
 
 Activate webook trigger for continued automation for proof of task.
-
