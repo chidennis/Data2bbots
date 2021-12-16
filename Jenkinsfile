@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('1-Clone'){
             steps{
-                git credentialsId: '82d2de1e-77b3-42ce-9b59-201aa27b1cde', url: 'https://github.com/kiki023/Data2bbots'
+                git credentialsId: 'fillinthegap', url: 'https://github.com/kiki023/Data2bbots'
             }
         }
         stage('Terraform Init'){
