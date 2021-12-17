@@ -1,6 +1,5 @@
 # Data2bot Task
 This task will provision a RedHat 8 instance using Terraform as Iac and Jenkins tool for our CI-CD pipeline.
-
 # Jenkins Installation And Setup In AWS EC2 Redhat Instnace.
 
 Prerequisite
@@ -9,24 +8,22 @@ AWS Acccount.
 
 Create Redhat EC2 t2.medium Instance with 4GB RAM.
 
-Create Security Group and open Required ports.
+Create Security Group and open Required ports
 
 8080 got Jenkins, ..etc
 
 Attach Security Group to EC2 Instance.
 
-
-Install Java JDK 1.8+ as Jenkins pre-requisite
-
-Install other softwares - git, unzip and wget
+# Install Java JDK 1.8+ as Jenkins pre-requisite
+# Install other softwares - git, unzip and wget
 
 sudo yum -y install unzip wget tree git
-
 sudo wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
 
 sudo yum install jdk-8u131-linux-x64.rpm -y
+sudo yum -y install unzip wget tree git
 
-Add Jenkins Repository and key
+# Add Jenkins Repository and key
 
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
@@ -34,7 +31,7 @@ cd /etc/yum.repos.d/
 
 sudo curl -O https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
-Install Jenkins
+# Install Jenkins
 
 sudo yum -y install jenkins  --nobest
 
