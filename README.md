@@ -53,13 +53,13 @@ get jenkins initial admin password
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-# To install Terraform on your now running jenkins server (Ubuntu 18.04 Distribution)
+# To install Terraform on your now running jenkins server (Redhat Distribution)
 
 as jenkins user
 
 cd /opt
 
-$ sudo apt install wget unzip -y
+$ sudo yum install wget unzip -y
 
 $ wget https://releases.hashicorp.com/terraform/1.1.0/terraform_1.1.0_linux_amd64.zip
 
