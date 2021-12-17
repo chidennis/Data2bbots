@@ -1,55 +1,35 @@
 # Data2bot Task
 This task will provision a RedHat 8 instance using Terraform as Iac and Jenkins tool for our CI-CD pipeline.
 
-# Prerequisite:
-
-AWS Web Console
-
-Create Ubuntu 18.04 ec2 Instance
-
-t2. medium
-
-# To Start.....
-
-Install Jenkins on your linux server (Ubuntu 18.04 Distribution)
-
-cd /opt
-
-#copy the below and run as script
-
-#!/bin/bash
-
-sudo hostname docker
-
-sudo apt update -y
-
-#Install java as jenkins dependency
-
-sudo apt install openjdk-11-jdk -y
-
-#install jenkins in ubuntu:
-
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-    /etc/apt/sources.list.d/jenkins.list'
-    
-sudo apt-get update
-
-sudo apt-get install jenkins -y
-
+Jenkins Installation And Setup In AWS EC2 Redhat Instnace.
+Prerequisite
+AWS Acccount.
+Create Redhat EC2 t2.medium Instance with 4GB RAM.
+Create Security Group and open Required ports.
+8080 got Jenkins, ..etc
+Attach Security Group to EC2 Instance.
+Install java openJDK 1.8+ for SonarQube version 7.8
+Install Java JDK 1.8+ as Jenkins pre-requisit
+Install other softwares - git, unzip and wget
+sudo hostname ci
+sudo yum -y install unzip wget tree git
+sudo wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+sudo yum install jdk-8u131-linux-x64.rpm -y
+Add Jenkins Repository and key
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+cd /etc/yum.repos.d/
+sudo curl -O https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Install Jenkins
+sudo yum -y install jenkins  --nobest
+start Jenkins service and verify Jenkins is running
 sudo systemctl start jenkins
-
-sudo usermod -aG docker jenkins
-
-echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins 
-
-docker --version
-
-sudo su - jenkins
-
-sudo systemctl start jenkins
-
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+Access Jenkins from the browser
+public-ip:8080
+curl ifconfig.co 
+get jenkins initial admin password
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 # To install Terraform on your now running jenkins server (Ubuntu 18.04 Distribution)
 
