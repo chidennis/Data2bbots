@@ -15,7 +15,6 @@ Create Security Group and open Required ports.
 
 Attach Security Group to EC2 Instance.
 
-Install java openJDK 1.8+ for SonarQube version 7.8
 
 Install Java JDK 1.8+ as Jenkins pre-requisite
 
