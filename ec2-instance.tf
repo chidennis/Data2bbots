@@ -8,13 +8,11 @@ terraform {
 }
 
 provider "aws" {
-        region = "us-east-1"
-        access_key = "KK"
-	secret_key = "KK/kk"
+        region = "us-west-1"
 }
 
 resource "aws_instance" "ec2" {
-    ami = "ami-0bhg860485402"
+    ami = "ami-054965c6cd7c6e462"
     instance_type = "t2.micro"
     tags = {
     Name = "Data2bots"
