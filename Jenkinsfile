@@ -25,6 +25,8 @@ pipeline{
         stage ('Terraform Destroy'){
             steps{
                 sh '/usr/local/bin/terraform destroy --auto-approve'
+            }
+        }
                 
     }
         
