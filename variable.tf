@@ -1,3 +1,3 @@
 variable "key_pair_name" {
-  default = "love23"
+  default = "terraform-practice"
 }
