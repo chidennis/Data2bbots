@@ -15,7 +15,7 @@ resource "aws_instance" "ec2" {
     ami = "ami-054965c6cd7c6e462"
     instance_type = "t2.micro"
     tags = {
-    Name = "Data2bots"
-    Envrionment = "stage"
+    Name = "Ubaha-project"
+    Envrionment = "production"
   }
 }
