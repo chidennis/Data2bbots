@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_instance" "ec2" {
     ami = "ami-054965c6cd7c6e462"
     instance_type = "t2.micro"
-    key_pair = "terraform-practice"
+    key_name = "terraform-practice"
     tags = {
     Name = "Ubaha-project"
     Envrionment = "production"
