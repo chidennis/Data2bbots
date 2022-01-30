@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('1-Clone'){
             steps{
-                git credentialsId: 'Git-hub-Cred', url: 'https://github.com/kiki023/Data2bbots'
+                git credentialsId: 'GITHUB-CREDENTIALS', url: 'https://github.com/chidennis/Data2bbots'
             }
         }
         stage('Terraform Init'){
