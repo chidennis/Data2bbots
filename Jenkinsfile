@@ -22,11 +22,11 @@ pipeline{
                 sh '/usr/local/bin/terraform apply --auto-approve'
             }
         }   
-        stage ('Terraform Destroy'){
-            steps{
-                sh '/usr/local/bin/terraform destroy --auto-approve'
-            }
-        }
+        //stage ('Terraform Destroy'){
+            //steps{
+                //sh '/usr/local/bin/terraform destroy --auto-approve'
+            //}
+        //}
                 
     }
         
